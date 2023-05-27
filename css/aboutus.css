@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Inter';
+    outline: none;
+
+}
+
+body {
+    background-color: #fefefe;
+}
+
+/* header start */
+header {
+    width: 100%;
+    height: 80px;
+    background: #9391F3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-family: 'Iceberg';
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+header .registration {
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    background-color: #4B5DE6;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* header finish */
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+
+}
+
+.navbar ul li .ghost {
+    display: none;
+}
+
+.navbar ul li a:hover {
+    color: #4B5DE6;
+    background-color: #fefefe;
+}
+
+
+.aboutus {
+    width: 100%;
+    padding-top: 250px;
+    height: 80vh;
+    padding: 80px 0;
+    background-image: url(../Group\ 24\ \(1\).png);
+
+    background-repeat: no-repeat;
+}
+
+.aboutus .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.aboutus .container .block {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #4B5DE6;
+    box-shadow: 0 0 25px #1e2a82;
+    color: white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.aboutus .container .block p {
+    font-size: 23px;
+    line-height: 40px;
+}
+
+
+
+/* footer start */
+footer {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #302f79;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+footer .container .column li a {
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #302f79;
+    font-size: 16px;
+}
+
+/* footer end */
+@media (max-width:1320px) {
+    header {
+        padding: 0 50px;
+    }
+
+}
+
+
+
+@media (max-width:550px) {
+
+.aboutus{
+    height: 100vh;
+}
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    footer .container .logo {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+@media (max-width:1160px) {
+    header {
+        padding: 0 25px;
+    }
+
+    header .registration {
+        display: none;
+    }
+
+    .navbar ul li .ghost {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .navbar {
+
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #9391F3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.5s;
+        overflow: hidden;
+
+    }
+
+    .navbar.active {
+        height: 100vh;
+    }
+
+    .navbar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .navbar.active ul {
+        opacity: 1;
+    }
+
+    .navbar ul li a {
+        margin-bottom: 12px;
+    }
+
+}
