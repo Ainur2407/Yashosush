@@ -91,19 +91,19 @@ header .registration {
 }
 
 .course .container img {
-    width: 400px;
+    width: 300px;
     border-radius: 15px;
 }
 
 .course h3 {
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .course p {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -218,7 +218,16 @@ footer .container .column li a {
         margin-bottom: 12px;
     }
 }
-
+@media (max-width:800px){
+    .course .container{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+    .course .container img{
+        margin-bottom: 20px;
+        width: 250px;
+    }
+}
 @media (max-width:550px) {
 
 
